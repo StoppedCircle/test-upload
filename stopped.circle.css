@@ -1,0 +1,327 @@
+
+
+/*속성 일반 지정할 땐 OO{}, 고유 id일때는 .OO{}*/
+/*이미지는 ../폴더/파일 경로로!*/
+
+* {padding: 0; margin: 0;}
+
+
+
+
+body{
+    background-color: rgb(204, 216, 224);
+    padding: 0;
+    margin: 0;
+}
+
+.frame{
+    margin: 70px 200px;
+    display: flex;
+    flex-direction: column;}
+
+/*---------네비게이터----------*/
+
+
+.navigator{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;}
+
+.title{
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color:rgb(114, 126, 131)}
+
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav ul{
+    float: left;
+    list-style: none;
+    margin-right: 20%;
+    position: relative;
+    margin: 0px; 
+ }
+
+nav ul li{
+    float: left;
+    display: inline-block;
+    margin: 0px;
+    margin-left: 25px;
+}
+
+nav ul ul{
+    position: absolute;
+    top: 100px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+    
+
+}
+
+nav ul li:hover > ul{
+    top: 60px;
+    opacity: 1;
+    visibility: visible;
+    
+}
+
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    background-color: rgb(236, 236, 236);
+}
+.menu{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    padding: 3px;
+    border-radius: 20px;
+
+}
+     
+
+nav ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 15px;
+    padding: 8px 10px;
+}
+
+
+
+
+
+.menu:hover{
+    color: white;
+    background-color: rgb(121, 138, 146);
+    transition: 0.2s;}
+
+
+
+
+
+/*---------인트로----------*/
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 30%;
+background-image: url("intro1.jpg");}
+
+    .comment{
+        font-size: 20px;
+        font-family: 'Gowun Batang', serif;}
+
+    .eng-comment{
+        font-size: 15px;
+        font-family: 'Montserrat', sans-serif;}
+
+
+
+
+
+/*----------아트워크---------*/
+
+
+.works-menu{
+    font-family: 'Montserrat', serif;
+    font-size: 30px;
+    color:rgb(114, 126, 131);
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;}
+
+/*---------슬라이드 섹션 공통메뉴-------*/
+
+.slidewrap{
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slidelist{
+    white-space: nowrap;
+    font-size:0;
+}
+
+.slidelist > li{
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    transition: all .5s;
+    padding: 0;
+    margin: 0;
+}
+
+.slidelist > li > a{
+    display: block;
+    position: relative;
+}
+
+.slidelist > li > a img{
+    width: 100%;
+}
+
+.slide-control{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:10;
+    width:100%;
+    height:100%;
+}
+
+.slide-control label{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 50px;
+    cursor: pointer;
+}
+
+.slide-control .left{
+    left: 1px;
+    background: url("left.png") center center / 50% no-repeat;
+}
+
+.slide-control .right{
+    right: 1px;
+    background: url("right.png") center center / 50% no-repeat;
+}
+
+
+
+
+
+
+
+
+/*-------섹션1(bluegarden) 개별 설정-------*/
+    .bluegarden input[id*="bg"]{
+        display: none;
+    }
+    
+
+    .bluegarden [id="bg1"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+    .bluegarden [id="bg2"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+    .bluegarden [id="bg3"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+    .bluegarden [id="bg4"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-300%);}
+    .bluegarden [id="bg5"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-400%);}
+
+    .bluegarden .slide-control [class*="control"] {display: none;}
+
+    .bluegarden [id="bg1"]:checked ~ .slidewrap .control01 {display: block;}
+    .bluegarden [id="bg2"]:checked ~ .slidewrap .control02 {display: block;}
+    .bluegarden [id="bg3"]:checked ~ .slidewrap .control03 {display: block;}
+    .bluegarden [id="bg4"]:checked ~ .slidewrap .control04 {display: block;}
+    .bluegarden [id="bg5"]:checked ~ .slidewrap .control05 {display: block;}
+
+
+    .bginfo{
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 20px;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+
+
+/*-------섹션2(girlslove) 개별 설정-------*/
+    .girlslove input[id*="gl"]{
+        display: none;
+    }
+    
+
+    .girlslove [id="gl1"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+    .girlslove [id="gl2"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+    .girlslove [id="gl3"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+    .girlslove [id="gl4"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-300%);}
+    .girlslove [id="gl5"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-400%);}
+
+    .girlslove .slide-control [class*="control"] {display: none;}
+
+    .girlslove [id="gl1"]:checked ~ .slidewrap .control01 {display: block;}
+    .girlslove [id="gl2"]:checked ~ .slidewrap .control02 {display: block;}
+    .girlslove [id="gl3"]:checked ~ .slidewrap .control03 {display: block;}
+    .girlslove [id="gl4"]:checked ~ .slidewrap .control04 {display: block;}
+    .girlslove [id="gl5"]:checked ~ .slidewrap .control05 {display: block;}
+
+
+    .glinfo{
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 20px;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------푸터--------*/
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.link a {text-decoration: none; color: black;}
+a:link{text-decoration: none;}
+    .contact{
+        font-family: 'Montserrat', serif;
+        color:rgb(114, 126, 131);
+        font-size: 30px;
+        text-align: center;
+        margin: 0px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        }
+
+    .link{
+        font-family: 'Montserrat', serif;
+        text-align: left;
+        text-decoration: none;
+        margin-left: 30%;
+        
+    color:rgb(85, 102, 110);
+        }
+
+    .e-mail:hover{
+        color: white;
+        transition: 0.2s;}
+    .instagram:hover{
+        color: white;
+        transition: 0.2s;}
+    
+
+    .copyright{
+        margin-top: 100px;
+        margin-bottom: 300px;
+        text-align: center;
+    }
+
+    
