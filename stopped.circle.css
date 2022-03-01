@@ -1,0 +1,531 @@
+
+
+/*속성 일반 지정할 땐 OO{}, 고유 id일때는 .OO{}*/
+/*이미지는 ../폴더/파일 경로로!*/
+
+* {padding: 0; margin: 0;}
+html{font-size: 6.25%;}
+
+
+
+body{
+    background-color: rgb(204, 216, 224);
+    padding: 0;
+    margin: 0;
+}
+
+.frame{
+    margin: 70rem 150rem;
+    display: flex;
+    flex-direction: column;}
+    
+        @media (max-width: 820px){
+            .frame{
+                margin: 20px 40px;}
+        }
+
+
+/*---------네비게이터----------*/
+
+
+.navigator{
+    display: table;
+    flex-direction:row wrap;
+    justify-content: space-between;
+}
+
+
+
+nav .title{
+    float: left;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    color:rgb(114, 126, 131);
+    line-height: 70px;
+    padding: 30px;
+    line-height: 70px;
+    padding-left: 60px;
+}
+
+        
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav ul{
+    float: right;
+    list-style: none;
+    margin-right: 40%;
+    margin-left: 20%;
+    position: relative;
+    margin: 0px; 
+ }
+
+nav ul li{
+    display: inline-block;
+    margin: 0px;
+    margin-left: 25px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 16px;
+    padding: 8px 15px;
+}
+
+nav ul ul{
+    position: absolute;
+    top: 70px; 
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    background-color: rgb(236, 236, 236);
+}
+
+nav ul li:hover > ul{
+    top: 60px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 20px;
+}
+     
+
+nav ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 15px;
+    padding: 8px 10px;
+}
+
+
+
+
+.menu:hover{
+    color: white;
+    background-color: rgb(121, 138, 146);
+    transition: 0.2s;}
+
+.show, .icon, input{display: none;}
+#btn-1, #btn-2{display: none;}
+
+
+
+
+/*---------인트로----------*/
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100rem;
+    margin-left: 40%;
+    padding-left: 40%;}
+
+    .comment{
+        font-size: 30px;
+        font-family: 'Gowun Batang', serif;}
+
+    .eng-comment{
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;}
+
+
+
+
+
+/*----------아트워크---------*/
+
+
+.works-menu{
+    font-family: 'Montserrat', serif;
+    font-size: 50rem;
+    color:rgb(114, 126, 131);
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;}
+
+/*---------슬라이드 섹션 공통메뉴-------*/
+
+.slidewrap{
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slidelist{
+    white-space: nowrap;
+    font-size:0;
+}
+
+.slidelist > li{
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    transition: all .5s;
+    padding: 0;
+    margin: 0;
+}
+
+.slidelist > li > a{
+    display: block;
+    position: relative;
+}
+
+.slidelist > li > a img{
+    width: 100%;
+}
+
+.slide-control{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:10;
+    width:100%;
+    height:100%;
+}
+
+.slide-control label{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 50px;
+    cursor: pointer;
+}
+
+.slide-control .left{
+    left: 1rem;
+    background: url("left.png") center center / 50% no-repeat;
+}
+
+.slide-control .right{
+    right: 1rem;
+    background: url("right.png") center center / 50% no-repeat;
+}
+
+
+
+
+
+
+
+/*-------섹션1(bluegarden) 개별 설정-------*/
+    .bluegarden input[id*="bg"]{
+        display: none;
+    }
+    
+
+    .bluegarden [id="bg1"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+    .bluegarden [id="bg2"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+    .bluegarden [id="bg3"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+    .bluegarden [id="bg4"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-300%);}
+    .bluegarden [id="bg5"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-400%);}
+
+    .bluegarden .slide-control [class*="control"] {display: none;}
+
+    .bluegarden [id="bg1"]:checked ~ .slidewrap .control01 {display: block;}
+    .bluegarden [id="bg2"]:checked ~ .slidewrap .control02 {display: block;}
+    .bluegarden [id="bg3"]:checked ~ .slidewrap .control03 {display: block;}
+    .bluegarden [id="bg4"]:checked ~ .slidewrap .control04 {display: block;}
+    .bluegarden [id="bg5"]:checked ~ .slidewrap .control05 {display: block;}
+
+
+    .bginfo{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20rem;
+        margin-top: 20px;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+
+
+/*-------섹션2(girlslove) 개별 설정-------*/
+    .girlslove input[id*="gl"]{
+        display: none;
+    }
+    
+
+    .girlslove [id="gl1"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+    .girlslove [id="gl2"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+    .girlslove [id="gl3"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+    .girlslove [id="gl4"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-300%);}
+    .girlslove [id="gl5"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-400%);}
+
+    .girlslove .slide-control [class*="control"] {display: none;}
+
+    .girlslove [id="gl1"]:checked ~ .slidewrap .control01 {display: block;}
+    .girlslove [id="gl2"]:checked ~ .slidewrap .control02 {display: block;}
+    .girlslove [id="gl3"]:checked ~ .slidewrap .control03 {display: block;}
+    .girlslove [id="gl4"]:checked ~ .slidewrap .control04 {display: block;}
+    .girlslove [id="gl5"]:checked ~ .slidewrap .control05 {display: block;}
+
+
+    .glinfo{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20rem;
+        margin-top: 20px;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+
+
+
+
+/*---------푸터--------*/
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.link a {text-decoration: none; color: black;}
+a:link{text-decoration: none;}
+    .contact{
+        font-family: 'Montserrat', serif;
+        color:rgb(114, 126, 131);
+        font-size: 50rem;
+        text-align: center;
+        margin: 0px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        }
+
+    .link{
+        font-family: 'Montserrat', serif;
+        font-size: 20rem;
+        text-align: left;
+        text-decoration: none;
+        margin-left: 30%;
+        
+    color:rgb(85, 102, 110);
+        }
+
+    .e-mail:hover{
+        color: white;
+        transition: 0.2s;}
+    .instagram:hover{
+        color: white;
+        transition: 0.2s;}
+    
+
+    .copyright{
+        font-size: 15rem;
+        margin-top: 100px;
+        margin-bottom: 300px;
+        text-align: center;
+    }
+
+    
+
+
+
+
+
+/*-------------------미디어쿼리--------------------*/
+
+
+@media (max-width: 1166px) {
+
+    /*---네비게이션---*/
+
+    nav ul{
+        margin-right: 0px;
+        float: left;
+    }
+
+    nav .title{
+        font-size: 50px;
+        padding-left: 20px;
+        width: 100%;
+    }
+
+    nav ul li, nav ul ul li{
+        display: block;
+        width: 100%;
+    }
+
+    nav ul ul{
+        top: 70px;
+        position: static;
+        border-top: none;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul ul ul li{
+        position: static;
+    }
+
+    nav ul ul li{
+        border-bottom: 0px;
+    }
+
+    nav ul li a{
+        padding-left: 40px;
+    }
+
+    nav ul ul ul a{
+        padding-left: 80px;
+    }
+
+    .show{
+        font-family: 'Montserrat';
+        display: inline-block;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        padding: 5px;
+        margin: 0px;
+        margin-bottom: 22px;
+        line-height: 15px;
+        cursor: pointer;
+    }
+
+    .show:hover{
+        color: white;
+        background-color: rgb(121, 138, 146);
+        transition: 0.2s;
+        border-radius: 20px;}
+
+    .icon{
+        display: block;
+        color:rgb(114, 126, 131);
+        position: absolute;
+        right: 70px;
+        line-height: 100px;
+        font-size: 70px;
+        cursor: pointer;
+    }
+
+
+    nav ul li a:hover{
+        box-shadow: none;
+    }
+
+    .show + a, ul{
+        display: none;
+    }
+
+    [id^=btn]:checked + ul{
+        display: block;
+    }
+}
+/*---인트로---*/
+
+@media (max-width: 1166px){
+    .comment{
+         font-size: 18px;
+    }
+    .eng-comment{
+        font-size: 17px;
+    }
+}
+
+/*---작업물---*/
+
+@media (max-width: 1166px){
+    .works-menu{
+        font-size: 30px;
+    }
+
+    .slidewrap{
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .slidelist{
+        white-space: nowrap;
+        font-size:0;
+    }
+    
+    .slidelist > li{
+        display: flex;
+        vertical-align: middle;
+        max-width: 100%;
+        transition: all .5s;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .slidelist > li > a{
+        display: block;
+        position: relative;
+    }
+    
+    .slidelist > li > a img{
+        max-width: 100%;
+    }
+    
+    .slide-control{
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:10;
+        width:100%;
+        height:100%;
+    }
+    
+    .slide-control label{
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 50px;
+        cursor: pointer;
+    }
+    
+    .slide-control .left{
+        left: 1rem;
+        background: url("left.png") center center / 50% no-repeat;
+    }
+    
+    .slide-control .right{
+        right: 1rem;
+        background: url("right.png") center center / 50% no-repeat;
+    }
+    
+
+}
+
+@media (max-width: 1166px){
+    .bginfo, .glinfo{
+        font-size: 16px;
+    }
+}
+
+
+
+
+/*---푸터---*/
+@media (max-width: 1166px){
+    .contact{
+        font-size: 30px;
+    }
+}
+
