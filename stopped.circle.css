@@ -103,7 +103,7 @@ nav ul ul li{
     width: 150px;
     float: none;
     display: list-item;
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(236, 242, 247);
 }
 
 nav ul li:hover > ul{
@@ -113,7 +113,7 @@ nav ul li:hover > ul{
 }
 
 .menu{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Noto Serif KR', sans-serif;
     font-size: 15px;
     padding: 5px;
     border-radius: 20px;
@@ -121,6 +121,8 @@ nav ul li:hover > ul{
      
 
 nav ul li a{
+    
+    font-family: 'Noto Serif KR', sans-serif;
     color: rgb(0, 0, 0);
     text-decoration: none;
     line-height: 70px;
@@ -370,7 +372,7 @@ color:rgb(85, 102, 110);
 
 }
 
-@media (max-width: 1166px) /*반응형메뉴*/{
+@media (max-width: 1166px) /*반응형메뉴(햄버거 관련)*/{
 
     nav ul{
         margin-right: 0px;
@@ -403,7 +405,7 @@ color:rgb(85, 102, 110);
     }
 
     nav ul ul li{
-        border-bottom: 0px;
+        border-bottom: 0;
     }
 
     nav ul li a{
