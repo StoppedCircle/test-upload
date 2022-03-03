@@ -24,6 +24,7 @@ body{
 
 .frame{
     margin: 70px 150px;
+    
     display: flex;
     flex-direction: column;}
     
@@ -154,7 +155,7 @@ nav ul li a{
     font-size: 30px;
     font-family: 'Gowun Batang', serif;}
 
-    .highlight{background: linear-gradient(to top,rgb(241, 249, 252) 50%, transparent 50%);}
+    .highlight{background: linear-gradient(to top,rgb(227, 236, 240) 40%, transparent 40%);}
 
 .eng-comment{
     font-size: 20px;
@@ -260,7 +261,7 @@ nav ul li a{
     .bginfo{
         font-family: 'Montserrat', sans-serif;
         font-size: 20rem;
-        margin-top: 20px;
+        margin-top: 10rem;
         margin-bottom: 100px;
         text-align: center;
     }
@@ -287,7 +288,7 @@ nav ul li a{
     .glinfo{
         font-family: 'Montserrat', sans-serif;
         font-size: 20rem;
-        margin-top: 20px;
+        margin-top: 10rem;
         margin-bottom: 100px;
         text-align: center;
     }
@@ -326,7 +327,7 @@ a:link{text-decoration: none;}
     
 color:rgb(85, 102, 110);
     }
-
+.e-mail .instagram{align-items: center;}
 .e-mail:hover{
     color: white;
     transition: 0.2s;}
@@ -334,7 +335,7 @@ color:rgb(85, 102, 110);
     color: white;
     transition: 0.2s;}
 
-
+.clicktogo{align-items: center;}
 .copyright{
     font-size: 15rem;
     margin-top: 100px;
@@ -413,14 +414,14 @@ color:rgb(85, 102, 110);
     }
 
     nav ul ul ul a{
-        padding-left: 80px;
+        padding-left: 40px;
     }
-
+    .menu{font-size: 18rem;}
     .show{
         font-family: 'Montserrat';
         display: inline-block;
         color: rgb(0, 0, 0);
-        font-size: 16px;
+        font-size: 18rem;
         padding: 5px;
         margin: 0px;
         margin-bottom: 5px;
@@ -449,7 +450,7 @@ color:rgb(85, 102, 110);
         box-shadow: none;
     }
 
-    .show + a, ul{
+    .show + a, nav ul{
         display: none;
     }
 
@@ -478,52 +479,21 @@ color:rgb(85, 102, 110);
 /*---작업물---*/
 @media (max-width: 1166px){
     
-    .works-menu{
-        font-size: 30px;
-    }
+    .works-menu{font-size: 30px;}
+
+    .bginfo .glinfo{font-size: 18px; padding-top: 0;}
 
     .slidewrap {max-width: 100%;}
 
- /* 
-    .slidewrap{
-        width: 100%;
-        margin: 0 auto;
-        overflow: visible;
-        position: relative;
-    }
-
-    .slidelist{
-        width: 100%;
-        position: absolute;
-        white-space: nowrap;
-        display: block;
-        overflow: auto;
-        font-size: 0;
-    }
-   
-    .slidelist > li{
-        display: inline-block;
-        vertical-align: middle;
-        width: 100%;
-        transition: all .5s;
-        padding: 0;
-        margin: 0;
-    }
-   
-    .slide-control label{
-        position: absolute;
-        z-index: 1;
-        top: 50%;
-        transform: translateY(+50%);
-        padding: 30px;
-        cursor: pointer;
-    }
-    */
+    .slide-control label{padding: 30px;}
+    
+    
 }
     
 /*---푸터---*/
 @media (max-width: 1166px){
-    .contact{
-        font-size: 30px;
-    }
+    .contact{font-size: 30px;}
+}
+@media (max-width: 580px){
+ .link{margin-left: 10%; margin-right: 10%;}
 }
