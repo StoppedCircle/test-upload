@@ -125,7 +125,7 @@ nav ul li a{
     font-family: 'Noto Serif KR', sans-serif;
     color: rgb(0, 0, 0);
     text-decoration: none;
-    line-height: 70px;
+    line-height: 60px;
     font-size: 15px;
     padding: 8px 10px;
 }
@@ -423,8 +423,8 @@ color:rgb(85, 102, 110);
         font-size: 16px;
         padding: 5px;
         margin: 0px;
-        margin-bottom: 22px;
-        line-height: 15px;
+        margin-bottom: 5px;
+        line-height: 22px;
         cursor: pointer;
     }
 
