@@ -1,9 +1,10 @@
-* {padding: 0; margin: 0;}
+* {padding: 0; margin: 0; scroll-behavior: smooth;}
 
 body{
     background-color: rgb(204, 216, 224);
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .frame{
@@ -14,7 +15,7 @@ body{
     
         @media (max-width: 1166px){
             .frame{
-                margin: 30px 80px;}
+                margin: 30px 50px;}
         }
 
         @media (max-width: 430px){
@@ -31,15 +32,65 @@ body{
     color:rgb(114, 126, 131);
     padding: 30px;
     line-height: 70px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 
-.info{display: grid; 
-    grid-template-columns: 1fr 5fr;
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    margin-right: 40%;
+    margin-left: 20%;
+    position: relative;
+    margin: 0px; 
+    text-decoration: none;
+}
+ nav ul li{margin: 0;}
+
+.navigator{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    font-size: 20px;
+    padding: 5px;
+    background-color: rgb(242, 251, 255);
+    margin: 30px; 
+    border-radius: 0px 0px 20px 20px;
+    margin-bottom: 30px;
+    opacity: 80%;
+}
+a {text-decoration: none;}
+
+.menu{
+    font-weight: 300;
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    color:rgb(53, 57, 59);
+    letter-spacing: 0; 
+}
+
+.menu:hover{
+    color: white;
+    background-color: rgb(146, 176, 190);
+    transition: 0.2s;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+
+.info{
+    max-width: 1200px;
+    display: grid; 
+    grid-template-columns: 200px 1fr;
     grid-template-rows: 1fr;
     grid-gap: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
 
 .works-title{grid-column: 1; grid-row: 1;
     font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
@@ -66,10 +117,12 @@ body{
 b{font-weight: 900;}
 
 .line{
-    width: 50vw; height: .5px; background-color:rgb(150, 160, 165); 
-    text-align:center; 
-    margin-left: 50%; margin-right: 50%;
-    margin: 150px;
+    height: .5px; 
+    background-color:rgb(150, 160, 165); 
+    text-align: center;
+    margin: 10vh;
+    position: relative;
+    
 }
 
 /*------------슬라이드 공용----------*/
@@ -146,6 +199,10 @@ b{font-weight: 900;}
         text-align: center;
         grid-gap: 5px;
         margin-bottom: 5px;
+
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .img-fixed{
         max-width: 100%;
@@ -193,6 +250,10 @@ b{font-weight: 900;}
     text-align: center;
     grid-gap: 5px;
     margin-bottom: 5px;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
@@ -214,3 +275,152 @@ b{font-weight: 900;}
     .lily [id="gl5"]:checked ~ .slidewrap .control05 {display: block;}
     .lily [id="gl6"]:checked ~ .slidewrap .control06 {display: block;}
 
+
+
+/*-------섹션3(물줄기를 따라) 개별 설정-------*/
+
+.stream-fix{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    max-width: 1200px;
+    text-align: center;
+    grid-gap: 5px;
+    margin-bottom: 5px;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.img-fixed{
+    max-width: 100%;
+    height: auto;
+}
+.img-fixed-wide{
+    max-width: 100%;
+    grid-column: 1/4; grid-row: 1;}
+
+
+
+.stream input[id*="st"]{display: none;}
+
+.stream [id="st1"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+.stream [id="st2"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+.stream [id="st3"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+.stream [id="st4"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-300%);}
+.stream [id="st5"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-400%);}
+.stream [id="st6"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-500%);}
+.stream [id="st7"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-600%);}
+.stream [id="st8"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-700%);}
+.stream [id="st9"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-800%);}
+.stream [id="st10"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-900%);}
+
+.stream .slide-control [class*="control"] {display: none;}
+
+.stream [id="st1"]:checked ~ .slidewrap .control01 {display: block;}
+.stream [id="st2"]:checked ~ .slidewrap .control02 {display: block;}
+.stream [id="st3"]:checked ~ .slidewrap .control03 {display: block;}
+.stream [id="st4"]:checked ~ .slidewrap .control04 {display: block;}
+.stream [id="st5"]:checked ~ .slidewrap .control05 {display: block;}
+.stream [id="st6"]:checked ~ .slidewrap .control06 {display: block;}
+.stream [id="st7"]:checked ~ .slidewrap .control07 {display: block;}
+.stream [id="st8"]:checked ~ .slidewrap .control08 {display: block;}
+.stream [id="st9"]:checked ~ .slidewrap .control09 {display: block;}
+.stream [id="st10"]:checked ~ .slidewrap .control10 {display: block;}
+
+
+
+
+
+
+/*----------------------------------------반응형---------------------------------------*/
+
+@media (max-width: 1166px){
+
+    .title{
+        font-size: 40px;
+        padding-left: 20px;
+        padding-right: 500px;
+    }
+
+    .navigator{
+        width: 100vw;
+        margin: 0;
+        margin-left: calc(-50vw + 50%);
+    }
+    .menu{
+        font-size: 15px;
+    }
+
+    .info{
+        grid-gap: 20px;
+        grid-template-columns: 120px 1fr;
+
+    }
+
+    .works-title{
+        font-size: 40px;
+    }
+
+    .works-info{
+        font-size: 20px;
+        margin-left: 5px;
+    }
+
+    .works-spec{
+        font-size: 18px;
+        grid-column: 1/4;
+    }
+
+    #stream-title{
+        font-size: 30px;
+    }
+
+
+}
+
+
+
+@media (max-width: 430px) {
+    .title{
+        font-size: 30px;
+        padding-left: 20px;
+        padding-right: 500px;
+    }
+    
+    .menu{
+        font-size: 13px;
+    }
+
+    .info{
+        grid-gap: 10px;
+        grid-template-columns: 90px 1fr;
+        margin-left: 3px;
+    }
+
+    .works-title{
+        font-size: 30px;
+    }
+
+    .works-info{
+        font-size: 16px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .works-spec{
+        font-size: 14px;
+        grid-column: 1/4;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    #lily-title{
+        font-size: 25px;
+        word-break: break-all;
+    }
+
+    #stream-title{
+        font-size: 23px;
+    }
+}
