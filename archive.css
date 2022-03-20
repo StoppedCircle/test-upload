@@ -389,6 +389,12 @@ b{font-weight: 900;}
         padding-right: 500px;
     }
     
+    .navigator{
+        width: 100vw;
+        margin: 0;
+        margin-left: calc(-50vw + 50%);
+    }
+    
     .menu{
         font-size: 13px;
     }
