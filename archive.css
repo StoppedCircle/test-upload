@@ -1,6 +1,7 @@
 * {padding: 0; margin: 0; scroll-behavior: smooth;}
 
 body{
+    width: 100%;
     background-color: rgb(204, 216, 224);
     padding: 0;
     margin: 0;
@@ -302,31 +303,31 @@ b{font-weight: 900;}
 
 
 
-.stream input[id*="st"]{display: none;}
+    .stream input[id*="st"]{display: none;}
 
-.stream [id="st1"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
-.stream [id="st2"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
-.stream [id="st3"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
-.stream [id="st4"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-300%);}
-.stream [id="st5"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-400%);}
-.stream [id="st6"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-500%);}
-.stream [id="st7"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-600%);}
-.stream [id="st8"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-700%);}
-.stream [id="st9"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-800%);}
-.stream [id="st10"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-900%);}
+    .stream [id="st1"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+    .stream [id="st2"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+    .stream [id="st3"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+    .stream [id="st4"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-300%);}
+    .stream [id="st5"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-400%);}
+    .stream [id="st6"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-500%);}
+    .stream [id="st7"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-600%);}
+    .stream [id="st8"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-700%);}
+    .stream [id="st9"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-800%);}
+    .stream [id="st10"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-900%);}
 
-.stream .slide-control [class*="control"] {display: none;}
+    .stream .slide-control [class*="control"] {display: none;}
 
-.stream [id="st1"]:checked ~ .slidewrap .control01 {display: block;}
-.stream [id="st2"]:checked ~ .slidewrap .control02 {display: block;}
-.stream [id="st3"]:checked ~ .slidewrap .control03 {display: block;}
-.stream [id="st4"]:checked ~ .slidewrap .control04 {display: block;}
-.stream [id="st5"]:checked ~ .slidewrap .control05 {display: block;}
-.stream [id="st6"]:checked ~ .slidewrap .control06 {display: block;}
-.stream [id="st7"]:checked ~ .slidewrap .control07 {display: block;}
-.stream [id="st8"]:checked ~ .slidewrap .control08 {display: block;}
-.stream [id="st9"]:checked ~ .slidewrap .control09 {display: block;}
-.stream [id="st10"]:checked ~ .slidewrap .control10 {display: block;}
+    .stream [id="st1"]:checked ~ .slidewrap .control01 {display: block;}
+    .stream [id="st2"]:checked ~ .slidewrap .control02 {display: block;}
+    .stream [id="st3"]:checked ~ .slidewrap .control03 {display: block;}
+    .stream [id="st4"]:checked ~ .slidewrap .control04 {display: block;}
+    .stream [id="st5"]:checked ~ .slidewrap .control05 {display: block;}
+    .stream [id="st6"]:checked ~ .slidewrap .control06 {display: block;}
+    .stream [id="st7"]:checked ~ .slidewrap .control07 {display: block;}
+    .stream [id="st8"]:checked ~ .slidewrap .control08 {display: block;}
+    .stream [id="st9"]:checked ~ .slidewrap .control09 {display: block;}
+    .stream [id="st10"]:checked ~ .slidewrap .control10 {display: block;}
 
 
 
