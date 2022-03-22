@@ -37,6 +37,7 @@ body{
 }
 
 nav ul{
+    width: 100%;
     display: flex;
     list-style: none;
     justify-content: space-evenly;
@@ -44,9 +45,35 @@ nav ul{
     margin-left: 20%;
     position: relative;
     margin: 0px; 
+    margin-bottom: 2px;
     text-decoration: none;
 }
-nav ul li{margin: 10px;}
+
+nav ul li{
+    margin: 10px;
+    text-align: center;
+}
+
+nav ul li:hover{
+    background-color: rgb(146, 176, 190);
+    transition: 0.2s;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.menu{
+    width: 100px;
+    font-weight: 300;
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    color:rgb(53, 57, 59);
+    letter-spacing: 0; 
+}
+
+.menu:hover {
+    color:rgb(255, 255, 255);
+}
 
 .navigator{
     width: 100%;
@@ -62,31 +89,9 @@ nav ul li{margin: 10px;}
 }
 a {text-decoration: none;}
 
-.menu{
-    width: 100px;
-    font-weight: 300;
-    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
-    text-decoration: none;
-    font-size: 18px;
-    color:rgb(53, 57, 59);
-    letter-spacing: 0; 
-}
 
-.menu:hover{
-    color: white;
-    background-color: rgb(146, 176, 190);
-    transition: 0.2s;
-    padding: 5px;
-    border-radius: 20px;
-}
 
-.top-button{
-    color:rgb(79, 86, 88);
-    text-decoration: none;
-    margin-left: auto;
-    width: 20px;
-    float: right;
-}
+
 
 .info{
     max-width: 1200px;
@@ -99,6 +104,23 @@ a {text-decoration: none;}
     transform: translateX(-50%);
 }
 
+.top-button{
+    --offset: 50px;
+
+    position: sticky;
+    bottom: 20px;
+    place-self: end;
+    margin-top: 100vh + var(--offset);
+    z-index: 1;
+    color:rgb(100, 112, 119);
+    text-decoration: none;
+    float: right;
+    margin: 30px;
+    padding: 10px;
+    background-color: rgb(242, 251, 255);
+    border-radius: 30px;
+    opacity: 70%;
+}
 
 .works-title{grid-column: 1; grid-row: 1;
     font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
@@ -385,6 +407,35 @@ height: 100%;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*----------------------------------------반응형---------------------------------------*/
 
 @media (max-width: 1166px){
@@ -406,8 +457,14 @@ height: 100%;
         border-radius: 0;
     }
 
+    nav ul li{
+        margin: 3px;
+    }
+
     .menu{
         font-size: 15px;
+        line-height: 0.2;
+        word-break: keep-all;
     }
 
     .info{
@@ -434,7 +491,9 @@ height: 100%;
         font-size: 30px;
     }
 
-
+    #sewol-title{
+        word-break: keep-all;
+    }
 }
 
 
@@ -451,14 +510,34 @@ height: 100%;
     .works{
         margin: 0;
     }
-    
+
     .navigator{
         width: 100vw;
         border-radius: 0;
     }
 
+    nav ul li{
+        margin: 0;
+        line-height: .8;
+    }
+
+    nav ul li:hover{
+        color: white;
+        background-color: rgb(146, 176, 190);
+        transition: 0.2s;
+        padding: 5px;
+        border-radius: 20px;
+    }
+
     .menu{
-        font-size: 13px;
+        font-size: 8px;
+    }
+
+
+    .top-button{
+        bottom: 10px;
+        margin: 15px;
+        padding: 8px;
     }
 
     .info{
@@ -492,4 +571,15 @@ height: 100%;
     #stream-title{
         font-size: 23px;
     }
+
+    #sewol-title{
+        font-size: 20px;
+        word-break: keep-all;
+    }
+
+
+
+
+
+
 }
