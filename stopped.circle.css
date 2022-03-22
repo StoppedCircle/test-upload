@@ -459,14 +459,12 @@ color:rgb(85, 102, 110);
 /*---------작업물---------*/
 
 @media (max-width: 1166px) {.workinfo {font-size: 18px;}
-.works-menu {font-size: 40px; margin-bottom: 20px;}
-img{image-resolution: 200dpi;}}
+.works-menu {font-size: 40px; margin-bottom: 20px;}}
 
 @media (max-width: 430px) {
     .workinfo {font-size: 16px; text-align: center; padding: 0;}
     .more > .material-icons{font-size: 16px;}
-    .more{font-size: 16px;align-items: center;}
-img{image-resolution: 72dpi;}}
+    .more{font-size: 16px;align-items: center;}}
     
 
 
