@@ -60,7 +60,6 @@ nav .title{
     line-height: 70px;
     padding: 30px;
     line-height: 70px;
-    padding-left: 60rem;
 }
 
         
@@ -85,22 +84,6 @@ nav ul li{
     margin-left: 25px;
 }
 
-nav ul li a{
-    color: white;
-    text-decoration: none;
-    line-height: 70px;
-    font-size: 25px;
-    padding: 8px 15px;
-}
-
-nav ul ul{
-    position: absolute;
-    top: 70px; 
-    opacity: 0;
-    visibility: hidden;
-    transition: top .3s;
-}
-
 
 nav ul li:hover > ul{
     top: 60px;
@@ -113,17 +96,10 @@ nav ul li:hover > ul{
     font-size: 20px;
     padding: 5px;
     border-radius: 20px;
+    color: rgb(0, 0, 0);
 }
      
 
-nav ul li a{
-    font-family: 'Noto Serif KR', sans-serif;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    line-height: 60px;
-    font-size: 25px;
-    padding: 8px 10px;
-}
 
 .menu:hover{
     color: white;
@@ -373,6 +349,7 @@ color:rgb(85, 102, 110);
 @media (max-width: 1166px) /*반응형메뉴(햄버거 관련)*/{
 
     nav ul{
+        display: none;
         margin-right: 0px;
         float: left;
     }
@@ -392,27 +369,11 @@ color:rgb(85, 102, 110);
 
     nav ul li a{
         padding-left: 40px;
-
+        line-height: 3;
     }
 
-    .menu{font-size: 18rem;}
-    .show{
-        font-family: 'Montserrat';
-        display: inline-block;
-        color: rgb(0, 0, 0);
-        font-size: 18rem;
-        padding: 0;
-        margin: 0;
-        margin-bottom: 0;
-        line-height: 22px;
-        cursor: pointer;
-    }
+    .menu{font-size: 18px;}
 
-    .show:hover{
-        color: white;
-        background-color: rgb(121, 138, 146);
-        transition: 0.2s;
-        border-radius: 20px;}
 
     nav .icon{
         display: block;
@@ -429,9 +390,6 @@ color:rgb(85, 102, 110);
         box-shadow: none;
     }
 
-    .show + a, nav ul{
-        display: none;
-    }
 
     [id^=btn]:checked + ul{
         display: block;
@@ -441,6 +399,9 @@ color:rgb(85, 102, 110);
 
 /*---인트로---*/
 @media (max-width: 1166px){
+    
+    .intro{margin-top: 30px;}
+    
     .comment{
          font-size: 19.8px; word-break: keep-all;
     }
