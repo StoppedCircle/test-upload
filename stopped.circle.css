@@ -117,7 +117,7 @@ nav ul li:hover > ul{
 .intro{
     display: inline-block;
     margin-top: 100px;
-    margin-bottom: 80px;}
+    margin-bottom: 5vh;}
 
 .comment{
     font-size: 30rem;
@@ -132,7 +132,7 @@ nav ul li:hover > ul{
 }
 
 .line{
-    width: .5px; height: 200rem; background-color:rgb(150, 160, 165); 
+    width: .5px; height: 20vh; background-color:rgb(150, 160, 165); 
     text-align:center; position: relative; 
     margin-left: 50%; margin-right: 50%;
 }
@@ -145,7 +145,7 @@ nav ul li:hover > ul{
     font-size: 50rem;
     color:rgb(114, 126, 131);
     text-align: center;
-    margin-top: 80px;
+    margin-top: 5vh;
     margin-bottom: 50px;}
 
 
@@ -155,96 +155,68 @@ nav ul li:hover > ul{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 1200px;
+    max-width: 1500px;
     text-align: center;
     justify-content: center;
     place-items: center;
 }
 
-.bg{
+.works-grid{
     display: grid;
     margin: 0 auto;
     margin-top: 20px;
-    grid-gap: 5px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .5fr .5fr .5fr; 
-    place-items: center;
+    grid-gap: 7px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr .5fr; 
 }
 
-.gl{
-    display: grid;
-    margin-top: 20px;
-    grid-gap: 5px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .5fr .2fr;
-}
-
-.moolzool{
-    display: grid;
-    margin-top: 20px;
-    grid-gap: 5px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-}
-
-.gg{
-    display: grid;
-    margin-top: 20px;
-    grid-gap: 5px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .5fr .5fr;
-}
 
 img {width: 100%; height: 100%; object-fit: cover; transition: .4s}
 img:hover {transform: scale(150%); width: 100%; height: auto;}
 
-
 #bg1{grid-column: 1/3; grid-row: 1/3;}
 #bg2{grid-column: 3/4; grid-row: 1/2;}
 #bg3{grid-column: 3/4; grid-row: 2/3;}
-#bg4{grid-column: 1/2; grid-row: 3/4;}
-#bg5{grid-column: 2/3; grid-row: 3/4;}
+#bg4{grid-column: 4/5; grid-row: 1/2;}
+#bginfo{grid-column: 1/2; grid-row: 3/4;}
 
-#gl1{grid-column: 2/4; grid-row: 1/2;}
-#gl2{grid-column: 1/2; grid-row: 2/3;}
-#gl3{grid-column: 2/3; grid-row: 2/3;}
-#gl4{grid-column: 1/2; grid-row: 1/2;}
-#gl5{grid-column: 3/4; grid-row: 2/3;}
+#gl1{grid-column: 2/3; grid-row: 3/4;}
+#gl2{grid-column: 3/4; grid-row: 4/5;}
+#gl3{grid-column: 2/3; grid-row: 4/5;}
+#gl4{grid-column: 4/5; grid-row: 2/4;}
+#gl5{grid-column: 3/4; grid-row: 3/4;}
+#glinfo{grid-column: 4/5; grid-row: 4/5; text-align: bottom;}
 
-#moolzool1{grid-column: 1/3; grid-row: 1/3;}
-#moolzool2{grid-column: 3/4; grid-row: 1/2;}
-#moolzool3{grid-column: 3/4; grid-row: 2/3;}
-#moolzool4{grid-column: 1/2; grid-row: 3/4;}
-#moolzool5{grid-column: 2/3; grid-row: 3/4;}
-#moolzool6{grid-column: 3/4; grid-row: 3/4;}
-
-#gg1{grid-column: 3/4; grid-row: 1/2;}
-#gg2{grid-column: 2/3; grid-row: 1/2;}
-#gg3{grid-column: 1/2; grid-row: 1/3;}
-#gg4{grid-column: 2/3; grid-row: 2/3;}
+#moolzool1{grid-column: 1/3; grid-row: 5/7;}
+#moolzool2{grid-column: 3/4; grid-row: 5/6;}
+#moolzool3{grid-column: 4/5; grid-row: 5/6;}
+#moolzool4{grid-column: 4/5; grid-row: 6/7;}
+#moolzool5{grid-column: 3/5; grid-row: 7/8;}
+#moolzool6{grid-column: 3/4; grid-row: 6/7;}
+#mzinfo{grid-column: 2/3; grid-row: 7/8;}
 
 .workinfo {
     display: inline-block;
-    color:rgb(89, 99, 104);
-    font-size: 25px;
-    font-weight: 300; 
+    height: 35%;
+    color:rgb(255, 255, 255);
+    font-size: 16px;
     font-family: 'Montserrat', 'Gowun Dodum', sans-serif;;
-    text-align: right;
-    background-color: rgb(231, 237, 240);
-    margin-bottom: 80px; margin-top: 10px;
-    border-radius: 20px;
-    padding-right: 20px;
-    padding: 5rem;}
+    text-align: left;
+    background-color: rgb(110, 126, 134);
+    padding: 3px;
+line-height: 1;}
 
 .workinfo > .material-icons{font-size: 22px;}
 
-.linktoartworks {margin-bottom: 80px; text-align: center;}
+#bginfo #glinfo #mzinfo #gginfo{font-size: 10px;}
+
+
+.linktoartworks {margin-bottom: 5vh; margin-top: 5vh; text-align: center;}
 
 .more {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     color:rgb(114, 126, 131);
-    margin-bottom: 80px;
     border-radius: 20px;
     padding-left: 20px; padding-right: 20px;
 }
@@ -275,7 +247,7 @@ a:link{text-decoration: none;}
     font-size: 50rem;
     text-align: center;
     margin: 0px;
-    margin-top: 80px;
+    margin-top: 5vh;
     margin-bottom: 15px;
     }
 
@@ -419,11 +391,19 @@ color:rgb(85, 102, 110);
 
 /*---------작업물---------*/
 
-@media (max-width: 1166px) {.workinfo {font-size: 18px;}
-.works-menu {font-size: 40px; margin-bottom: 20px;}}
+@media (max-width: 1166px) {
+    .workinfo {font-size: 14px;}
+    .works-menu {font-size: 40px; margin-bottom: 20px;}
+}
 
 @media (max-width: 430px) {
-    .workinfo {font-size: 16px; text-align: center; padding: 0;}
+    .works-grid{grid-gap: 3px;}
+    .works .material-icons{display: none;}
+    .workinfo {font-size: 10px; padding: 2px; word-break: keep-all;}
+    #bginfo{height: 60%; text-align: left;}
+    #glinfo{height: 50%; text-align: left;}
+    #mzinfo{height: 40%; text-align: right;}
+
     .more > .material-icons{font-size: 16px;}
     .more{font-size: 16px;align-items: center;}}
     
