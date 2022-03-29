@@ -35,6 +35,7 @@ body{
     display: table;
     flex-direction:row wrap;
     justify-content: space-between;
+    margin-bottom: 5vh;
 }
 
 #title{
@@ -194,6 +195,7 @@ a {text-decoration: none;}
     font-family: 'Gowun Batang', 'Montserrat', sans-serif;
     font-size: 25px;
     margin-bottom: 20px;
+    word-break: keep-all;
 
 }
 
@@ -341,7 +343,9 @@ b{font-weight: 900;}
 
 
 
-/*-------섹션2(girlslove) 개별 설정-------*/
+/*---------------------------섹션2(girlslove) 개별 설정--------------------------------
+
+#lily-title{ font-size: 40px;}
 
 .lily-fix{
     display: grid;
@@ -375,6 +379,8 @@ b{font-weight: 900;}
     .lily [id="gl4"]:checked ~ .slidewrap .control04 {display: block;}
     .lily [id="gl5"]:checked ~ .slidewrap .control05 {display: block;}
     .lily [id="gl6"]:checked ~ .slidewrap .control06 {display: block;}
+---------------------------------------------------------------------------------------------*/
+
 
 /*-------섹션3(생명의숲) 개별 설정-----------*/
 
@@ -437,10 +443,6 @@ b{font-weight: 900;}
     transform: translateX(-50%);
 }
 
-.img-fixed{
-    max-width: 100%;
-    height: auto;
-}
 
     .stream input[id*="st"]{display: none;}
 
@@ -600,12 +602,20 @@ height: 100%;
     }
 
     .info{
-        grid-gap: 20px;
+        grid-gap: 10px;
         grid-template-columns: 120px 1fr;
 
     }
 
     .works-title {font-size: 40px; word-break: keep-all;}
+
+    #forest-title {font-size: 25px;}
+
+    #myanmar-title {font-size: 20px;}
+
+    #stream-title {font-size: 30px;}
+
+    #sbj-title{font-size: 20px;}
 
     .works-info{
         font-size: 20px;
@@ -617,11 +627,6 @@ height: 100%;
         grid-column: 1/4;
     }
 
-    #forest-title {font-size: 25px;}
-
-    #myanmar-title {font-size: 30px;}
-
-    #stream-title {font-size: 30px;}
 }
 
 
@@ -684,6 +689,16 @@ height: 100%;
         font-size: 30px; word-break: keep-all;
     }
 
+    #lily-title {font-size: 25px;}
+
+    #forest-title {font-size: 19px;}
+
+    #myanmar-title {font-size: 18px;}
+
+    #stream-title {font-size: 23px;}
+
+    #sewol-title {font-size: 20px;}
+    
     .works-info{
         font-size: 16px;
         margin: 0;
@@ -697,15 +712,7 @@ height: 100%;
         margin-bottom: 10px;
     }
 
-    #lily-title {font-size: 25px;}
 
-    #forest-title {font-size: 19px;}
-
-    #myanmar-title {font-size: 23px;}
-
-    #stream-title {font-size: 23px;}
-
-    #sewol-title {font-size: 20px;}
 
 
 
